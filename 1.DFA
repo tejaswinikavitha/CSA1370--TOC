@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+int checkString(char *input) {
+    int length = strlen(input);
+    if (input[0] == 'a' && input[length - 1] == 'a') {
+        return 1; 
+    } else {
+        return 0; 
+    }
+}
+
+int main() {
+    char input[100];
+    printf("Enter a string (a's and b's): ");
+    scanf("%s", input);
+    if (checkString(input)) {
+        printf("The string is accepted.\n");
+    } else {
+        printf("The string is rejected.\n");
+    }
+
+    return 0;
+}
